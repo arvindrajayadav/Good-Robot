@@ -1,0 +1,693 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="audio.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="avatar.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="bodyparts.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="character.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="collision.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="console.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="env.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="file.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="font.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="fx.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="glew.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="gltypes.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="hud.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="ini.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="interface.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="map.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="message.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="noise.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="page.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="page_pattern.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="particle.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="playerstats.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="random.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="render.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="resource.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="robot.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="robot_ai.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="spritemap.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_vorbis.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="symath.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="system.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="texture.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="transition.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="trivia.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="vbo.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="visible.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="world.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Pyrodactyl</Filter>
+    </ClCompile>
+    <ClCompile Include="RadioButtonData.cpp">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="steam_data.cpp">
+      <Filter>Pyrodactyl</Filter>
+    </ClCompile>
+    <ClCompile Include="projectile.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="zone.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="playerweapon.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="robotconfig.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TMXLayer.cpp">
+      <Filter>TMX</Filter>
+    </ClCompile>
+    <ClCompile Include="TMXMap.cpp">
+      <Filter>TMX</Filter>
+    </ClCompile>
+    <ClCompile Include="fxmachine.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="drop.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="lootpool.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_hud.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_mainmenu.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_opt.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="UpgradeButton.cpp">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="StoreButton.cpp">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_credits.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_tutorial.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_hatshop.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="LocalLeaderboard.cpp">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClCompile>
+    <ClCompile Include="SteamLeaderboard.cpp">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClCompile>
+    <ClCompile Include="SteamLeaderboardData.cpp">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClCompile>
+    <ClCompile Include="SteamLeaderboardMenu.cpp">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_highscore.cpp">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_upgrade.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_store.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_resolution.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Caption.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="element.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="hotkey.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressBar.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleProgressBar.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="textdata.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="SliderData.cpp">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClCompile>
+    <ClCompile Include="WorldTitleData.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_news.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_keybind.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="HoverInfo.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleProgressBar.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_gameover.cpp">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Pyrodactyl\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="inputval.cpp">
+      <Filter>Pyrodactyl\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="inputaxis.cpp">
+      <Filter>Pyrodactyl\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="XMLDoc.cpp">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="loaders.cpp">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="filesystem.cpp">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="stringpool.cpp">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClCompile>
+    <ClCompile Include="TextManager.cpp">
+      <Filter>Pyrodactyl\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="color.cpp">
+      <Filter>Pyrodactyl\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageManager.cpp">
+      <Filter>Pyrodactyl\Images</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageData.cpp">
+      <Filter>Pyrodactyl\Images</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="audio.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="avatar.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="bodyparts.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="character.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="collision.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="console.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="env.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="file.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="font.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="fx.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="gltypes.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="hud.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ini.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="input.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="interface.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="map.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="master.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="message.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="noise.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="page.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="particle.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="render.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="robot.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="spritemap.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_vorbis.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="string.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="symath.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="system.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="texture.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="transition.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="trivia.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="vbo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="visible.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="world.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="vectors.h">
+      <Filter>Pyrodactyl</Filter>
+    </ClInclude>
+    <ClInclude Include="common_header.h">
+      <Filter>Pyrodactyl</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Pyrodactyl</Filter>
+    </ClInclude>
+    <ClInclude Include="RadioButtonData.h">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonImage.h">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="steam_data.h">
+      <Filter>Pyrodactyl</Filter>
+    </ClInclude>
+    <ClInclude Include="projectile.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameProperty.h">
+      <Filter>Pyrodactyl</Filter>
+    </ClInclude>
+    <ClInclude Include="zone.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="playerweapon.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ZoneInfo.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TMXLayer.h">
+      <Filter>TMX</Filter>
+    </ClInclude>
+    <ClInclude Include="TMXMap.h">
+      <Filter>TMX</Filter>
+    </ClInclude>
+    <ClInclude Include="TileInfo.h">
+      <Filter>TMX</Filter>
+    </ClInclude>
+    <ClInclude Include="fxmachine.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="lootpool.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="drop.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_hud.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_mainmenu.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_menu.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_opt.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="UpgradeButton.h">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="StoreButton.h">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreButton.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_credits.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_tutorial.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_hatshop.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="LocalLeaderboard.h">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamLeaderboard.h">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamLeaderboardButton.h">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamLeaderboardData.h">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClInclude>
+    <ClInclude Include="SteamLeaderboardMenu.h">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_highscore.h">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_upgrade.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_store.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_resolution.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="Caption.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="element.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="hotkey.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressBar.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleProgressBar.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="TextData.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="SliderData.h">
+      <Filter>Pyrodactyl\Buttons</Filter>
+    </ClInclude>
+    <ClInclude Include="ValuePicker.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldTitleData.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_news.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_keybind.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="HoverInfo.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="HighScoreData.h">
+      <Filter>Pyrodactyl\Leaderboards</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleProgressBar.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_gameover.h">
+      <Filter>Pyrodactyl\UI Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Pyrodactyl\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="inputval.h">
+      <Filter>Pyrodactyl\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="inputaxis.h">
+      <Filter>Pyrodactyl\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="XMLDoc.h">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="numstr.h">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="loaders.h">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="filesystem.h">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="stringpool.h">
+      <Filter>Pyrodactyl\File I/O</Filter>
+    </ClInclude>
+    <ClInclude Include="TextManager.h">
+      <Filter>Pyrodactyl\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>Pyrodactyl\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageManager.h">
+      <Filter>Pyrodactyl\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageData.h">
+      <Filter>Pyrodactyl\Images</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_menuwithtitle.h">
+      <Filter>Pyrodactyl\UI Elements</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="message.ini">
+      <Filter>Game</Filter>
+    </None>
+    <None Include="notes.txt">
+      <Filter>Game</Filter>
+    </None>
+    <None Include="vertex.cg">
+      <Filter>Game</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{61ace2a2-4af1-4941-bc3c-9840dcecca0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl">
+      <UniqueIdentifier>{d78014aa-3289-4a04-9fa0-a2b5e93f0d58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl\Buttons">
+      <UniqueIdentifier>{5c986eb2-a07c-4804-973c-66c94095d79c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TMX">
+      <UniqueIdentifier>{38f9d71c-2a7d-4437-a50e-f0e4bd73dc98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl\Leaderboards">
+      <UniqueIdentifier>{3b407a0e-4663-4227-9894-78c66cf9911c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl\UI Elements">
+      <UniqueIdentifier>{9abd5c2d-054b-491e-9f73-38da6531b8b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl\UI Screens">
+      <UniqueIdentifier>{c561e953-6cae-46ca-a0b5-972f2bf84afb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl\Input">
+      <UniqueIdentifier>{9d5d7b20-2844-48e3-b6ce-86b46d88f7ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl\File I/O">
+      <UniqueIdentifier>{219021c9-6323-4aef-987c-b0462906f8a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl\Text">
+      <UniqueIdentifier>{a3083928-8bb8-456d-9db4-8ccff7d16df2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pyrodactyl\Images">
+      <UniqueIdentifier>{3605315d-2391-4402-9fe8-04fe4cf2676f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GoodRobot.rc">
+      <Filter>Game</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="gr.ico">
+      <Filter>Game</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

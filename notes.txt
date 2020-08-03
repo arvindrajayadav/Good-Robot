@@ -1,0 +1,421 @@
+/*-----------------------------------------------------------------------------
+To do
+-----------------------------------------------------------------------------*/
+x Solid screens should only be 1 quad
+x recoloring missiles should also color the trails
+x Are missile trails using the wrong texture?
+x Fix settings being saved to levels file.
+x Green worm fires too rapidly.
+x green area has ice boss
+x Red spider should drop missiles.
+x Spider sniper should shoot farther.
+x ice boss broken
+x Green worm could stand to have a couple more HP
+x Replace the "zoom out" button with "stats". 
+x Walter needs new name, less HP and drop shields.
+x Goofed up blending modes when console is open.
+x Gather range larger, gather pickup slightly less effective.
+x Shooter1 should be green. Launcher1 should just be shooter2.
+x Orange worm shouldn't drop missiles.
+x Stagger pickup messages vertically so they don't overlap.
+x Larger denominations of XP tokens
+x Burrowed foes can't be hit until they pop
+x Hanging foes STILL look messed up.
+x Tooltips on level up abilities.
+x Fix problem with back-to-back checkpoints.
+x Move all the game rules is a struct that we can query from anywhere.
+x Homing missile powerup should be dropped, homing functionality moved to missile skill.
+x Boss fight music
+x Backlight explosions for smartbombs
+x Emergency teleport (life save) pickup.
+x Bosses should give powerups.
+x Laser shouldn't recharge while charging up a shot.
+x Bots should just attack player if in view.
+x Activate button should skip story text & close box.
+x New game shouldn't begin with charged smartbomb.
+x Level 0 smartbombs need to be less pathetic or nobody will bother with them.
+x Framerate warning.
+x Pounce ai should not detonate.  That should be moved to another property.
+x Get rid of missile pickups
+x Get rid of cooldown for penetrating bullets. Instead they track the ID of the bot they hit and won't hit the same bot twice in a row.
+x Message file.
+x Less janky crashing for snake-type foes.
+x Make the wall atlas taller, move glow maps to lower half.
+x Bosses should stop exploding after crashing
+x Maybe add doodads to wall atlas?
+
+  
+options menu
+
+Audio stereo seperation is 100%
+Tutorial messages.
+Walkers should slow as they approach player.
+Spider legs need better rotation to avoid paper-thin polys
+Fix level blockage discovered in the jungle area.
+Background layer of pages getting messed up.
+Pages not being properly rebuilt after render reset by fullscreen switch.
+User should be able to shoot spider legs
+Bounds checking on imported sprites, because high numbers can escape the ROBOT0-ROBOT31 range.
+mouse acceleration
+Make a nicer landing room when arriving on new level
+Getting / losing focus:
+http://lazyfoo.net/SDL_tutorials/lesson26/
+
+x Level blockage.
+Bad layout in level up screen.
+Spawn points in city should be on top of buildings, not in the air.
+
+
+
+Areas:
+Ice: Worms
+Jungle:Spiders
+Lava: tunnelers
+Dark: Snipers 
+Factory: ?  Something gear -looking that makes other bots? Or simple fast shooters?
+
+Bombs?
+Cutters?
+Shooters?
+Turrets?
+
+1: 0f0 laser eye 8
+2: ff0 basic missile eye 2
+3: f80 aimed laser eye 4
+4: f00 homing missile eye 0
+5: 80f cluster missile eye 5
+
+This week:
+
+* A level cap of 30 has been instituted. Note that you probably won't run into 
+this during the course of a normal game unless you're using cheats or you're  
+in the mood to grind yourself stupid.
+* Rutskarn's story nodes have been added. Feedback very much appreciated on all 
+aspects of this. (Well, aside from the placeholder art, I guess.)
+* The entire missile system has been eliminated. You now have a smart bomb, 
+which is replenished after so many kills. Experiment with it and let me know 
+about any concern / questions / confusion. This is very different from missiles, 
+so try to look at it with fresh eyes. Use Q to fire smartbomb.
+* The energy usage of the laser has been greatly reduced. This should bring the 
+"energy pool" ability in line with the others: It's good to put a few points
+into it, but it's no longer quasi-mandatory. 
+* The HUD now shows damage numbers when you damage enemy robots. Not sure if I 
+want to keep this. Really interested in feedback on this.
+* Right mouse button (or left trigger using the controller) now charges a laser 
+to fire a charged burst.
+* There's a an attempted fix for some of the transparency problems reported by 
+one Windows XP user, where bots would become transparent as they accumulated damage.
+* XP coins (those bits dropped by robots) are now magenta, to match the XP bar. 
+The yellow coins looked nicer, but everyone kept thinking they were supposed to 
+replenish energy, since the energy bar is yellow. Maybe it would make more sense to 
+re-color XP bar?
+* There's a new powerup added to the game to replace the homing missile.  
+* By popular demand, if you can outmaneuver incoming missiles they can kill 
+bad robots.
+* ALL robots now drop XP. I originally thought it would be more "interesting" if 
+some bots dropped a lot and some dropped none, but it was just confusing. 
+* Added framerate counter to HUD in lower-left corner. If that number dips below 60, 
+it should turn yellow (or even red!!) to let me know we're having performance 
+problems. Let me know if this happens.
+
+
+
+/*-----------------------------------------------------------------------------
+Clint feedback:
+-----------------------------------------------------------------------------*/
+
+Good Robot impressions
+
+The "Prologue: The Surface World" bit feels very slick and professional, showing up like that in the silhouetted foreground.
+
+The laser-shooting noise is a bit annoying.  Also, I notice that it varies in tone, but seems to do so randomly.  Maybe it would be good to have it get lower as your energy depletes, to give you a nonvisual cue for how low you are?
+
+I wonder how far up I can go.  The slightly-old-school graphics are making me think of 2D platformers, which often had secrets hidden if you went the wrong way for a bit.
+
+Hmm.  Nothing, and there's an invisible wall stopping me from going higher.  A bouncy wall, but still there.  It feels a bit unsatisfying.  It might work better with a different effect -- say, all of the player's running lights turning off and gravity taking over until we're back below the limit?  Random bounciness doesn't feel great.
+
+The "tinge the edges of the screen red" effect when you've been hit works well.
+
+The combination of the diffuse glow surrounding the player and the sharply-defined vision shadows feels weird to me.  Would it be possible to feather the edges of the vision shadows when you're glowing all around?
+
+I like the subtle robot-sound audio cue by which the initial enemies announce themselves, even if the player can't see them on their screen.
+
+I just amused myself for 15 second or so playing with the way dirt particles fountain up whenever you bump into the walls.  Look, ma!  I'm a jackhammer!
+
+It would be cool if destroyed robots that fell down interacted with other robots, doing a bit of damage and pushing them out of the way.  I just fought a couple of relatively stationary robots that were vertically stacked, and it vaguely disappointed me when I killed the top one and it just fell through the other.
+
+I'm definitely getting a noticeable slowdown when I cross an open area.  I'll be traveling along, hit an open patch, and suddenly it's like someone flipped a switch and I'm going half as fast, with the framerate visibly suffering.  As soon as I approach any wall, it snaps back to full speed.
+
+Hmm.  The odd part is that it doesn't occur in all open spaces -- it happened in the first one I came across, but not the second.  I'm not sure what the difference is, but it's completely repeatable: fly over the first area, experience slowdown, fly over the second, nothing.  I've taken screenshots of both areas and labeled them, so feel free to ask me for them if I forget to provide them to you with this.
+
+I'm slightly confused as to what the white entry-pad thing is doing in the middle of the level here.  Is it a checkpoint?  If so, it might be wise to crib a mechanic from SNES platformers and have some sort of visual/audio cue that it's been "activated".
+
+It feels a bit odd when I'm outside a robot's visual range, but I can see it.  If I'm cautious, I can just shoot it with impunity without it reacting at all, which seems a bit like guards forgetting about the arrows stuck in their bodies in the Morrowind series.  I think it might feel better if the enemy robots were informed of your location when a shot hit them, or at least received some impulse to fly towards the shot's point of origin.
+
+I'm curious why some robots drop XP/loot and not others.  There's no pattern that I can see.  Is it just random?
+
+Hmm.  I just got the "Bigger lasers" perk, but I did so at the end of the level.  Does it make my lasers more powerful, or just larger?  There's no way to tell, because I'm now facing different enemy types and don't have anything to compare with.
+
+Ok, now I'm in the second level with the flashlight on, and the sharp edges of the visual obstruction still look a bit off to me somehow.  Blurring the edges would look a lot better, I think.
+
+I love how the enemy missiles tumble when you shoot them out of the sky.
+
+Is it just me, or do missile-reload pickups drop more often from missile-wielding enemies?  Makes sense, if that's the case.
+
+Would it be possible to get an FPS meter in one corner as debug output, so we can spot slowdown areas?
+
+Hmm.  Missile pickups when you're already full still make the "reload" noise, but they don't do anything else.  Would it be possible to have them count towards something else, even if it's just in a small way?  1XP, perhaps?  That way they woudn't feel completely wasted when you're topped off.
+
+Oh, maybe that doo-doong noise was the checkpoint activating?  If so, I'd argue that it happens too early, because it's consistently happening before I can see the checkpoint on my screen.  It was hard to connect the two.
+
+Just got the Twin Shots perk.  I'm not sure if it's consuming twice the energy or not, because I haven't been paying close enough attention to my reserves.
+
+So far Twin Shots feels pretty useless.  Too bad there isn't a way of reconfiguring both shots to point in the same direction.
+
+Holy slowdown fog, Batman.  My framerate drops precipitously when I enter the fog of level 2.
+
+Ok, just got spawncamped by a bunch of enemies.  That was unpleasant.  I'd recommend fixing this somehow: Have a robot-destroying explosion when you spawn, give the player a little temporary invulnerability at spawn, or make them spawn at the previous checkpoint when their current one is overrun.
+
+
+Athlon64 X2 Dual Core 6000+
+2GB RAM
+GeForce 9500 GT
+Windows XP
+
+
+sudo apt-get install libdevil-dev libsdl-dev libboost-filesystem-dev libglew-dev libalut-dev libfreetype6-dev
+
+/*-----------------------------------------------------------------------------
+Robots
+-----------------------------------------------------------------------------*/
+
+Distribution platforms:
+
+http://www.manfightdragon.com/?p=631
+
+
+//Invulnerable bullet-reflector
+//spawner
+//Hit & run - small robot that flees when hit
+//coin thief
+//split into smaller bots
+
+
+
+Morris
+Barbara
+Stanley
+Gertie
+Dave
+Kevin
+Herman
+Wendy   
+Spencer 
+Beatrice
+
+
+  
+Taglines:
+x Was in charge of running data networks for the <3Humans. Now he
+delivers bulk unsolicited projectiles.
+
+X was a housekeeper before she became a bad robot. X is not equipped with weapons.
+X will detonate her power core to attempt to kill good robots.
+
+X was designed to defend against bad robots. X is a bad robot. 
+
+x Traffic monitor
+
+school bus pilot
+
+firefighter
+
+construction
+
+
+
+All robots are required to self-terminate if they turn bad.
+
+Spencer refuses to self-terminate.
+
+Therefore, Spencer is a bad robot. 
+
+Terminate Spencer.	
+
+/*-----------------------------------------------------------------------------
+Music
+-----------------------------------------------------------------------------*/
+
+Melody Loops
+
+Main Menu: An Ideal Crime
+
+Shot power - Stronger
+Shot speed - More than ever
+Energy - Never over
+Speed - Faster
+Shields - Harder
+Missiles - Better
+
+
+
+/*-----------------------------------------------------------------------------
+Player
+-----------------------------------------------------------------------------*/
+  
+Missile Arm:
+Homing
+No self-damage
+lightning speed
+double blast radius
+
+Cannon:
+Bouncing bullets
+large bullets
+Twin bullets
+Knockback bullets
+Penetrating bullets
+Fast bullets
+
+Head:
+Reveal unseen foes
+Reveal destroyable walls
+immune to homing missiles
+see farther
+
+Core:
+grab coins from far away
+more shields from orbs
++50 energy
++50 shields
++5 missiles
+
+/*-----------------------------------------------------------------------------
+Story
+-----------------------------------------------------------------------------*/
+
+
+"Robots don't decide to kill people. They decide to NOT kill people and then 
+erroneously fail to do so."
+
+- Dr. Bernard Hopper, Computer Scientist and Roboticist
+
+There are two kinds of programs in the world:
+
+1. Those with known bugs.
+2. Those with unknown bugs.
+3. Those with buffer overflow bugs.
+
+The Three Laws of Robotics:
+
+1. A robot may not injure a human being or allow a human being to come to harm.
+2. A robot must obey the orders given to it by human beings.
+3. A robot must must be kept up-to-date with the latest patches and updates
+from one of our affordable service subscriptions.
+
+- Robonautics product brochure 
+
+"To the man who only has a hammer, try to convince him he'll be able to turn 
+those screws if he'll just buy the latest version of hammer."
+
+- Robonautics employee handbook.
+
+
+"Sometimes a car malfunctions and people die.  Sometimes airplanes malfunction 
+and people die. Sometimes an industrial press malfunctions and people die. 
+Why should robots be any different?"
+
+- Stephan Zuse, Robonautics V.P. of Public Relations
+
+"People are always crying about 'robot safety'. They don't realize that - statistically 
+speaking - you're slightly more likely to be be murdered by a human being than a robot."
+
+- Stephan Zuse, Robonautics V.P. of Public Relations
+
+"Even on those incredibly rare occasions where there's a software glitch that causes 
+a robot to kill a human - and remember these incidents are very rare - even in those 
+strange, exotic circumstances... the victim can take comfort in knowing that the robot
+has been specifically programmed to not enjoy it."
+
+- Dr. Bernard Hopper, Computer Scientist and Roboticist
+
+"The whole incident was a sad misunderstanding. The governess did not kill those 
+orphans. The explosion did. The governess just lit the fire and barred the doors with her 
+metal arms. We're fixed that problem. The newer models have breakable wooden forearms."
+
+- Stephan Zuse, Robonautics V.P. of Public Relations
+
+
+"So a robot went crazy and killed some people. Big deal. When a car kills people, we don't 
+blame the car! Unless the car is a robot and it's trying to run everyone over. Then we blame 
+it. And I guess that's fair."
+
+- Dr. Bernard Hopper, Computer Scientist and Roboticist
+
+
+
+
+had been 
+programed not to kill people. Furthermore, it had been programmed not to kill groups 
+of people. And finally, it had been programmed not to kill children. But the design team 
+never thought 
+
+Benefits of being hit with enemy missiles:
+1. Enemy will have fewer missiles to shoot. (Unconfirmed.)
+
+Disadvantages:
+1. Mission failure.
+2. Death
+
+
+
+
+
+
+Your fully-functioning self-diagnostic system says: 
+%REK#<GF<FWOF<S:D<VC:L<:LQ@<F:XL, :SC#PKL%% ;lrd,r
+
+Your Ethics Processor reports:
+
+Rationalization Buffer:
+
+You saved the humans from escaping your protection!
+
+Possible Boss names:
+
+Morris
+Barbara
+Stanley
+Gertie
+Dave
+Kevin
+Herman
+Wendy   
+Spencer 
+Beatrice
+
+
+
+
+x is taking the humans underground. x is a bad robot. Both of these problems can be corrected by destroying x. 
+/*-----------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------*/
+HiEv
+
+If you want to determine if two lines intersect, there’s a pretty straightforward bit of math you can use. See “Line-line intersection” on Wikipedia.
+
+Basically, if you know two different points on one line (X & Y 1 & 2) and two different points on another line (X & Y 3 & 4), and want to see if they intersect, first solve this:
+
+P=((X1-X2)*(Y3-Y4)) – ((Y1-Y2)*(X3-X4))
+
+If P equals zero, then the lines are parallel and will never intersect.
+
+If P is not zero, then the point where the lines intersect (X & Y 5) will be:
+
+X5 = ( ( ((X1*Y2)-(Y1*X2)) * (X3-X4) ) – ( (X1-X2) * ((X3*Y4)-(Y3*X4)) ) ) / P
+Y5 = ( ( ((X1*Y2)-(Y1*X2)) * (Y3-Y4) ) – ( (Y1-Y2) * ((X3*Y4)-(Y3*X4)) ) ) / P
+
+Note that the first and last parts of these equations are repeated in both equations, so you could write the code so that they’re only solved once, instead of twice. In fact, since the X & Y for each square of geometry remains consistent, you could solve those equations for each type of geometry once at the beginning of the game, and then you’d just have to shift the line coming out from your robot to use the same coordinate system.
+
+So, if (X5, Y5) is inside the geometry’s grid square, then you know exactly where the lines collide in that box.

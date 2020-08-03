@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{101DAF6E-6D94-4572-A07E-B7A64D6BA14D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GoodRobot</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)sdl2/include;$(ProjectDir)/steamworks/public/;$(ProjectDir)openal/include/;$(ProjectDir)openil/include/;$(ProjectDir)freetype/include/;$(ProjectDir)rapidxml/;p:/SDK/boost_1_62_0/;D:/Libs/boost/;$(ProjectDir)/steamworks/public/steam/;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)sdl2/lib/x86/;$(ProjectDir)/steamworks/redistributable_bin/;$(ProjectDir)/steamworks/public/steam/lib/win32/;D:/Libs/boost/stage/lib/;p:/SDK/boost_1_62_0/stage/lib;$(ProjectDir)angle/Debug_Win32/lib;$(LibraryPath)</LibraryPath>
+    <TargetName>Debug</TargetName>
+    <OutDir>..\Good Robot\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)sdl2/include;$(ProjectDir)/steamworks/public/;$(ProjectDir)openal/include/;$(ProjectDir)openil/include/;$(ProjectDir)freetype/include/;$(ProjectDir)rapidxml/;p:/SDK/boost_1_62_0/;D:/Libs/boost/;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)angle/Release_Win32/lib;$(ProjectDir)sdl2/lib/x86/;$(ProjectDir)/steamworks/redistributable_bin/;$(ProjectDir)/steamworks/public/steam/lib/win32/;D:/Libs/boost/stage/lib/;p:/SDK/boost_1_62_0/stage/lib;$(LibraryPath)</LibraryPath>
+    <OutDir>..\Good Robot\</OutDir>
+    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>master.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)angle/libEGL/;$(ProjectDir)angle/libGLESv2/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>f:\SDK\boost_1_55_0\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_WARNINGS;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>master.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir)angle/libEGL/;$(ProjectDir)angle/libGLESv2/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>E:\SDK\boost_1_55_0\stage\lib</AdditionalLibraryDirectories>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+      <AdditionalDependencies>libEGL.lib;libGLESv2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)*.ini" "$(OutputPath)core\data\" /Y /I</Command>
+    </PostBuildEvent>
+    <Manifest>
+      <EnableDpiAwareness>true</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="audio.h" />
+    <ClInclude Include="avatar.h" />
+    <ClInclude Include="bodyparts.h" />
+    <ClInclude Include="button.h" />
+    <ClInclude Include="ButtonImage.h" />
+    <ClInclude Include="camera.h" />
+    <ClInclude Include="Caption.h" />
+    <ClInclude Include="character.h" />
+    <ClInclude Include="CircleProgressBar.h" />
+    <ClInclude Include="collision.h" />
+    <ClInclude Include="color.h" />
+    <ClInclude Include="common_header.h" />
+    <ClInclude Include="console.h" />
+    <ClInclude Include="drop.h" />
+    <ClInclude Include="element.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="env.h" />
+    <ClInclude Include="file.h" />
+    <ClInclude Include="filesystem.h" />
+    <ClInclude Include="font.h" />
+    <ClInclude Include="fx.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="ui_gameover.h" />
+    <ClInclude Include="gltypes.h" />
+    <ClInclude Include="HighScoreData.h" />
+    <ClInclude Include="hotkey.h" />
+    <ClInclude Include="HoverInfo.h" />
+    <ClInclude Include="hud.h" />
+    <ClInclude Include="ImageData.h" />
+    <ClInclude Include="ImageManager.h" />
+    <ClInclude Include="ini.h" />
+    <ClInclude Include="input.h" />
+    <ClInclude Include="inputaxis.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="inputval.h" />
+    <ClInclude Include="interface.h" />
+    <ClInclude Include="ui_keybind.h" />
+    <ClInclude Include="loaders.h" />
+    <ClInclude Include="fxmachine.h" />
+    <ClInclude Include="LocalLeaderboard.h" />
+    <ClInclude Include="lootpool.h" />
+    <ClInclude Include="map.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="master.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="message.h" />
+    <ClInclude Include="ui_menuwithtitle.h" />
+    <ClInclude Include="ui_news.h" />
+    <ClInclude Include="noise.h" />
+    <ClInclude Include="numstr.h" />
+    <ClInclude Include="GameProperty.h" />
+    <ClInclude Include="playerweapon.h" />
+    <ClInclude Include="projectile.h" />
+    <ClInclude Include="RectangleProgressBar.h" />
+    <ClInclude Include="ProgressBar.h" />
+    <ClInclude Include="ui_resolution.h" />
+    <ClInclude Include="ScoreButton.h" />
+    <ClInclude Include="SteamLeaderboard.h" />
+    <ClInclude Include="SteamLeaderboardButton.h" />
+    <ClInclude Include="SteamLeaderboardData.h" />
+    <ClInclude Include="SteamLeaderboardMenu.h" />
+    <ClInclude Include="steam_data.h" />
+    <ClInclude Include="StoreButton.h" />
+    <ClInclude Include="ui_store.h" />
+    <ClInclude Include="TileInfo.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="TMXLayer.h" />
+    <ClInclude Include="TMXMap.h" />
+    <ClInclude Include="ui_credits.h" />
+    <ClInclude Include="ui_hatshop.h" />
+    <ClInclude Include="ui_highscore.h" />
+    <ClInclude Include="ui_hud.h" />
+    <ClInclude Include="ui_opt.h" />
+    <ClInclude Include="particle.h" />
+    <ClInclude Include="player.h" />
+    <ClInclude Include="random.h" />
+    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="render.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="robot.h" />
+    <ClInclude Include="page.h" />
+    <ClInclude Include="SliderData.h" />
+    <ClInclude Include="stringpool.h" />
+    <ClInclude Include="system.h" />
+    <ClInclude Include="sprite.h" />
+    <ClInclude Include="spritemap.h" />
+    <ClInclude Include="stb_vorbis.h" />
+    <ClInclude Include="string.h" />
+    <ClInclude Include="symath.h" />
+    <ClInclude Include="TextData.h" />
+    <ClInclude Include="TextManager.h" />
+    <ClInclude Include="texture.h" />
+    <ClInclude Include="RadioButtonData.h" />
+    <ClInclude Include="transition.h" />
+    <ClInclude Include="trivia.h" />
+    <ClInclude Include="ui_mainmenu.h" />
+    <ClInclude Include="ui_menu.h" />
+    <ClInclude Include="ui_tutorial.h" />
+    <ClInclude Include="UpgradeButton.h" />
+    <ClInclude Include="ui_upgrade.h" />
+    <ClInclude Include="ValuePicker.h" />
+    <ClInclude Include="vbo.h" />
+    <ClInclude Include="vectors.h" />
+    <ClInclude Include="visible.h" />
+    <ClInclude Include="world.h" />
+    <ClInclude Include="WorldTitleData.h" />
+    <ClInclude Include="XMLDoc.h" />
+    <ClInclude Include="zone.h" />
+    <ClInclude Include="ZoneInfo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="audio.cpp" />
+    <ClCompile Include="avatar.cpp" />
+    <ClCompile Include="bodyparts.cpp" />
+    <ClCompile Include="button.cpp" />
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="Caption.cpp" />
+    <ClCompile Include="character.cpp" />
+    <ClCompile Include="CircleProgressBar.cpp" />
+    <ClCompile Include="collision.cpp" />
+    <ClCompile Include="color.cpp" />
+    <ClCompile Include="console.cpp" />
+    <ClCompile Include="drop.cpp" />
+    <ClCompile Include="element.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="env.cpp" />
+    <ClCompile Include="file.cpp" />
+    <ClCompile Include="filesystem.cpp" />
+    <ClCompile Include="font.cpp" />
+    <ClCompile Include="fx.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="ui_gameover.cpp" />
+    <ClCompile Include="glew.cpp" />
+    <ClCompile Include="gltypes.cpp" />
+    <ClCompile Include="hotkey.cpp" />
+    <ClCompile Include="HoverInfo.cpp" />
+    <ClCompile Include="hud.cpp" />
+    <ClCompile Include="ImageData.cpp" />
+    <ClCompile Include="ImageManager.cpp" />
+    <ClCompile Include="ini.cpp" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="inputaxis.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="inputval.cpp" />
+    <ClCompile Include="interface.cpp" />
+    <ClCompile Include="ui_keybind.cpp" />
+    <ClCompile Include="loaders.cpp" />
+    <ClCompile Include="fxmachine.cpp" />
+    <ClCompile Include="LocalLeaderboard.cpp" />
+    <ClCompile Include="lootpool.cpp" />
+    <ClCompile Include="map.cpp" />
+    <ClCompile Include="main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="message.cpp" />
+    <ClCompile Include="ui_news.cpp" />
+    <ClCompile Include="noise.cpp" />
+    <ClCompile Include="playerweapon.cpp" />
+    <ClCompile Include="projectile.cpp" />
+    <ClCompile Include="RectangleProgressBar.cpp" />
+    <ClCompile Include="ProgressBar.cpp" />
+    <ClCompile Include="ui_resolution.cpp" />
+    <ClCompile Include="robotconfig.cpp" />
+    <ClCompile Include="SteamLeaderboard.cpp" />
+    <ClCompile Include="SteamLeaderboardData.cpp" />
+    <ClCompile Include="SteamLeaderboardMenu.cpp" />
+    <ClCompile Include="steam_data.cpp" />
+    <ClCompile Include="StoreButton.cpp" />
+    <ClCompile Include="ui_store.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="TMXLayer.cpp" />
+    <ClCompile Include="TMXMap.cpp" />
+    <ClCompile Include="ui_credits.cpp" />
+    <ClCompile Include="ui_hatshop.cpp" />
+    <ClCompile Include="ui_highscore.cpp" />
+    <ClCompile Include="ui_hud.cpp" />
+    <ClCompile Include="ui_opt.cpp" />
+    <ClCompile Include="page_pattern.cpp" />
+    <ClCompile Include="particle.cpp" />
+    <ClCompile Include="player.cpp" />
+    <ClCompile Include="playerstats.cpp" />
+    <ClCompile Include="random.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="render.cpp" />
+    <ClCompile Include="resource.cpp" />
+    <ClCompile Include="robot.cpp" />
+    <ClCompile Include="robot_ai.cpp" />
+    <ClCompile Include="page.cpp" />
+    <ClCompile Include="SliderData.cpp" />
+    <ClCompile Include="stringpool.cpp" />
+    <ClCompile Include="system.cpp" />
+    <ClCompile Include="sprite.cpp" />
+    <ClCompile Include="spritemap.cpp" />
+    <ClCompile Include="stb_vorbis.cpp" />
+    <ClCompile Include="string.cpp" />
+    <ClCompile Include="symath.cpp" />
+    <ClCompile Include="textdata.cpp" />
+    <ClCompile Include="TextManager.cpp" />
+    <ClCompile Include="texture.cpp" />
+    <ClCompile Include="RadioButtonData.cpp" />
+    <ClCompile Include="transition.cpp" />
+    <ClCompile Include="trivia.cpp" />
+    <ClCompile Include="ui_mainmenu.cpp" />
+    <ClCompile Include="ui_tutorial.cpp" />
+    <ClCompile Include="UpgradeButton.cpp" />
+    <ClCompile Include="ui_upgrade.cpp" />
+    <ClCompile Include="vbo.cpp" />
+    <ClCompile Include="visible.cpp" />
+    <ClCompile Include="world.cpp" />
+    <ClCompile Include="WorldTitleData.cpp" />
+    <ClCompile Include="XMLDoc.cpp" />
+    <ClCompile Include="zone.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="message.ini" />
+    <None Include="notes.txt">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vertex.cg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GoodRobot.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="gr.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

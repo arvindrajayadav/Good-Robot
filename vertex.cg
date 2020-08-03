@@ -1,0 +1,45 @@
+#version 150 compatibility
+//#version 				120 
+#define TEX0			gl_TexCoord[0]
+#define SPRITE_GRID	    32
+
+
+
+in float 		attrib_angle;
+in float 		attrib_scale;
+in vec3			attrib_position;
+in vec3			attrib_atlas;
+
+void main()
+{
+  vec4       vert;
+  float      texture_unit;
+  float      rad;
+  vec2       rotate;
+  
+  //Color is pass-through.
+  gl_FrontColor.rgba = gl_Color.rgba;
+  //atlas pos contains the column, row, and scale of our sprite in the TEXTURE.
+  if (attrib_atlas.z < 0) //no scale means pass-through coords.
+	TEX0.xy = gl_MultiTexCoord0.xy;
+  else {
+	  texture_unit = (1.0 / SPRITE_GRID) * attrib_atlas.z;
+	  TEX0.xy = (attrib_atlas.xy + gl_MultiTexCoord0.xy) * texture_unit;
+	  TEX0.y = 1-TEX0.y; //Because OpenGL thinks upside-down.
+  }
+  //Finally, prepare the vertex for the frag shader
+  vert = gl_Vertex;
+  rad = radians (attrib_angle);
+  rotate.x = sin (rad);
+  rotate.y = cos (rad);
+  vert.x = gl_Vertex.x * rotate.y - gl_Vertex.y * rotate.x;
+  vert.y = gl_Vertex.x * rotate.x + gl_Vertex.y * rotate.y;
+  vert.xy *= attrib_scale;
+  vert.xyz += attrib_position;
+  gl_Position = gl_ModelViewProjectionMatrix * vert;
+  //gl_Position.y += sin (radians (gl_Position.x * 720)) / 20;
+  //gl_Position.x += cos (radians (gl_Position.y * 720)) / 20;
+}
+
+
+
