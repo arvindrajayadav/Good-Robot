@@ -1,39 +1,25 @@
-# Good Robot #
+# Good Robot
 
-Most of the critical documents have been moved to Google docs. (Please email for access if you don't have it.)
+This is the source code for Good Robot, a procedurally generated shoot 'em up with light RPG elements made by Pyrodactyl Games in collaboration with Shamus Young.
+The code is based on a Good Robot prototype by Shamus Young, which was upgraded to SDL2 and a lot of CRAB engine (i.e. the Pyrodactyl engine used in Unrest and Will Fight for Food) features were integrated into it. 
 
-##Official To-Do List##
-https://docs.google.com/document/d/13Q1Y-BjT8PzEYVomvTaWnKbx-FZ15oiXEtL_w2zIwBY/edit
+# How to Compile
 
-##Design Doc##
-https://docs.google.com/document/d/1wugYxf3V9UDNGxsh5QyFkvdqQUqbJ1La86AHo2Pfd3Q/edit?usp=sharing
+After cloning the repository, you will need to set a valid Boost source and lib directories in Visual Studio settings. 
+For more information on how to set up Boost, visit https://www.boost.org/
 
-##Feature Discussions (Outdated)##
-https://docs.google.com/document/d/1vc-LK_1EkZCmcxi3P_nMlwjF4z8X3SsHj7I_Sw3k0mw/edit#
-
-##Story Discussion (Outdated)##
-https://docs.google.com/document/d/1rEi0WgMdNQxI10TsJL57FW-EdbCDLC9AzIEXcKj_08Q/edit
-
-### Linux ###
-These instructions are assuming Ubuntu. They are not yet using the steam-runtime.
-
-#### Linux - Setup ####
+# Linux - Setup
 
 Install the build tools and the libraries
 
-* `sudo apt-get install build-essential mercurial git cmake`
-* `sudo apt-get install libsdl1.2-dev libboost-filesystem-dev libboost-system-dev libglew-dev libfreetype6-dev libalut-dev libdevil-dev`
+    sudo apt-get install build-essential mercurial git cmake
+    sudo apt-get install libsdl1.2-dev libboost-filesystem-dev libboost-system-dev libglew-dev libfreetype6-dev libalut-dev libdevil-dev
 
-#### Linux - Compile ####
+# Running the Game
 
-* Clone the good-robot and good-robot-build repositories into a directory
-* Go into good-robot checkout and create a build directory and enter build directory
-( `cd good-robot`, `mkdir build`, `cd build`)
-* Run Cmake in build directory pointing at the good-robot directory (`cmake ..`)
-* Run make in the build directory (`make`)
-* Go into the good-robot-build directory (`cd ../../good-robot-build`)
-* Link (or copy) the "good_robot" executable into good-robot-build (`ln -s ../good-robot/build/good_robot`)
-* Run "good_robot" in the good-robot-build directory (`./good_robot`)
+After successfully compiling and building the executable, you will need the game's assets. 
+If you have a copy of the game, navigate to the install directory and:
+1. Copy the "core" folder to the binary location
+2. Copy the various DLL files to the binary location
 
-
-[Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+If you're having any issues with getting the code up and running, or just want to chat about the game, feel free to contact me!
