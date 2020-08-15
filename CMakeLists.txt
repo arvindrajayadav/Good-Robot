@@ -28,9 +28,11 @@ add_executable(good_robot WIN32 ${good_robot_SRC})
 add_definitions(-DCMAKE_BUILD)
 
 set(SDL_BUILDING_LIBRARY ON)
-find_package(SDL REQUIRED)
-target_link_libraries (good_robot ${SDL_LIBRARY})
-include_directories (${SDL_INCLUDE_DIR})
+# use pkg-config to find SDL2
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(SDL2 REQUIRED sdl2)
+target_link_libraries (good_robot ${SDL2_LIBRARIES})
+include_directories (${SDL2_INCLUDE_DIRS})
 
 find_package(OpenGL REQUIRED)
 target_link_libraries (good_robot ${OPENGL_LIBRARIES})
