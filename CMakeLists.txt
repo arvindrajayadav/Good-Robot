@@ -34,6 +34,7 @@ pkg_check_modules(SDL2 REQUIRED sdl2)
 target_link_libraries (good_robot ${SDL2_LIBRARIES})
 include_directories (${SDL2_INCLUDE_DIRS})
 
+set(OpenGL_GL_PREFERENCE "GLVND")
 find_package(OpenGL REQUIRED)
 target_link_libraries (good_robot ${OPENGL_LIBRARIES})
 include_directories (${OPENGL_INCLUDE_DIR})
