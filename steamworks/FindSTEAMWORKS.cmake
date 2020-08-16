@@ -42,7 +42,7 @@ else()
 	endif()
 endif()
 
-find_package_handle_standard_args(Steamworks
+find_package_handle_standard_args(STEAMWORKS
 	DEFAULT_MSG
 	STEAMWORKS_LIBRARY
 	STEAMWORKS_INCLUDE_DIR
